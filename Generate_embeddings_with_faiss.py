@@ -52,9 +52,12 @@ def load_faiss_index_and_metadata(index_path, metadata_path):
     index = faiss.read_index(index_path)
     metadata = np.load(metadata_path, allow_pickle=True).tolist()
 
-# Read and extract text from PDFs
-pdf_paths = ["./Medical Resourcers/Cognitive-Psychology-Sternberge.pdf", 
-             "./Medical Resourcers/Diagnostic and statistical manual of mental disorders _ DSM-5 ( PDFDrive.com ).pdf"]
+# Absolute paths to the PDFs
+base_dir = "./Medical Resourcers"
+pdf_paths = [
+    os.path.join(base_dir, "Cognitive-Psychology-Sternberge.pdf"),
+    os.path.join(base_dir, "Diagnostic_and_statistical_manual_of_mental_disorders_DSM-5.pdf")
+]
 documents = []
 for pdf_path in pdf_paths:
     document_text = extract_text_from_pdf(pdf_path)

@@ -72,7 +72,7 @@ def generate_openai_response(user_question, conversation_history):
     """
     
     # Query OpenAI with the augmented prompt
-    response = openai.Completion.create(
+    response = openai.chat_completions.create(
         engine="text-davinci-003",  # Choose your OpenAI engine
         prompt=prompt,
         max_tokens=150,
