@@ -4,8 +4,14 @@ from sentence_transformers import SentenceTransformer
 from collections import deque
 import numpy as np
 import faiss
+from dotenv import load_dotenv
 
-# Initialize OpenAI API key
+# Load environment variables from .env file
+load_dotenv()
+
+# Get OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 openai.api_key = "your-openai-api-key"  # Replace with your OpenAI API key
 # Initialize the SentenceTransformer for encoding questions
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')

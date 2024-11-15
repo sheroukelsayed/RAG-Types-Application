@@ -9,3 +9,4 @@ scikit-learn
 streamlit
 faiss-cpu
 numpy
+python-dotenv
