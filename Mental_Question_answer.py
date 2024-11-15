@@ -5,6 +5,7 @@ from collections import deque
 import numpy as np
 import faiss
 from dotenv import load_dotenv
+import os 
 
 # Load environment variables from .env file
 load_dotenv()
