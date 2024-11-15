@@ -53,10 +53,10 @@ def load_faiss_index_and_metadata(index_path, metadata_path):
     metadata = np.load(metadata_path, allow_pickle=True).tolist()
 
 # Absolute paths to the PDFs
-base_dir = "./Medical Resourcers"
+base_dir = ".\Medical Resourcers"
 pdf_paths = [
     os.path.join(base_dir, "Cognitive-Psychology-Sternberge.pdf"),
-    os.path.join(base_dir, "Diagnostic_and_statistical_manual_of_mental_disorders_DSM-5.pdf")
+    os.path.join(base_dir, "Diagnostic_and_statistical_manual_of_mental_disorders _ DSM-5.pdf")
 ]
 documents = []
 for pdf_path in pdf_paths:
