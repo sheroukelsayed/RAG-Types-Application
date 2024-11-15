@@ -6,7 +6,11 @@ import numpy as np
 import faiss
 from dotenv import load_dotenv
 import os 
+from openai import OpenAI
 
+client = OpenAI(
+    api_key = os.getenv("OPENAI_API_KEY"),
+)
 # Load environment variables from .env file
 load_dotenv()
 
@@ -72,7 +76,7 @@ def generate_openai_response(user_question, conversation_history):
     """
     
     # Query OpenAI with the augmented prompt
-    response = openai.chat_completions.create(
+    response = openai.client.completions.create(
         engine="text-davinci-003",  # Choose your OpenAI engine
         prompt=prompt,
         max_tokens=150,

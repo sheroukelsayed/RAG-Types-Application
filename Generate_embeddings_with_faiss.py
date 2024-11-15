@@ -61,6 +61,7 @@ pdf_paths = [
 documents = []
 for pdf_path in pdf_paths:
     document_text = extract_text_from_pdf(pdf_path)
+    print(document_text)
     documents.append(document_text)
 
 # Create embeddings for the extracted text
