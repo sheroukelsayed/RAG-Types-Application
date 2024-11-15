@@ -1,0 +1,11 @@
+openai
+langchain
+chromad
+PyMuPDF
+sentence-transformers
+transformers
+networkx
+scikit-learn
+streamlit
+faiss-cpu
+numpy
